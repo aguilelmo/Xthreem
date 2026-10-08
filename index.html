@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xthreem – MTB 24" per ragazzi, montata a mano in Ticino</title>
+<meta name="description" content="xthreem 24: mountain bike biammortizzata per ragazzi, montata e regolata a mano in Ticino. Edizione di lancio: 10 pezzi.">
+<meta property="og:title" content="xthreem 24 – edizione di lancio">
+<meta property="og:description" content="Mountain bike biammortizzata per ragazzi, montata a mano in Ticino. 10 pezzi a CHF 1.700.">
+<meta property="og:image" content="https://res.cloudinary.com/mial2ln4/image/upload/f_jpg,q_auto,w_1200/render_24_arancio_tre_quarti">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ---------- CONFIG: l'agente aggiorna solo questi valori ---------- */
+/* (vedi anche SITE_CONFIG nello script in fondo) */
+:root{
+  --slate:#1F2428;
+  --paper:#F2F3F1;
+  --white:#FFFFFF;
+  --orange:#F2661C;
+  --orange-deep:#C94D0E;
+  --red:#C8141E;
+  --mid:#626A71;
+  --line:#D5D8D6;
+  --display:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --text:"Barlow", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--slate);font-family:var(--text);font-size:18px;line-height:1.55}
+img{max-width:100%;height:auto;display:block}
+.hero>*,.story>*,.book-grid>*,.spec-grid>*{min-width:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.5px}
+.logo svg{width:34px;height:34px}
+.langs{display:flex;gap:4px}
+.langs button{font:600 15px var(--text);background:none;border:1px solid transparent;border-radius:6px;padding:6px 9px;color:var(--mid);cursor:pointer}
+.langs button[aria-pressed="true"]{color:var(--slate);border-color:var(--slate)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:5fr 7fr;gap:28px;align-items:center;padding:18px 0 40px}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(46px,7.2vw,92px);line-height:.92;margin:0 0 20px;letter-spacing:-.5px}
+.hero p.lead{font-size:20px;max-width:30em;margin:0 0 26px;color:#33393e}
+.price{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.price strong{font-family:var(--display);font-size:46px;font-weight:700;line-height:1}
+.price span{color:var(--mid);font-size:16px}
+.btn{display:inline-block;background:var(--orange);color:var(--white);font:600 18px var(--text);text-decoration:none;padding:15px 26px;border-radius:8px;border:0;cursor:pointer}
+.btn:hover{background:var(--orange-deep)}
+.hero figure{margin:0;position:relative}
+.hero figure img{width:100%;border-radius:4px}
+figcaption{font-size:14px;color:var(--mid);margin-top:8px}
+
+/* edition plate: the memorable element */
+.edition{background:var(--slate);color:var(--paper);padding:44px 0 50px}
+.edition-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.edition h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,44px);margin:0;line-height:1}
+.edition p{margin:0;max-width:34em;color:#C9CDD0}
+.plates{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:10px}
+.plate{min-width:0}
+.plate small{overflow-wrap:anywhere;hyphens:auto}
+.plate{aspect-ratio:3/4;border:2px solid #4A5157;border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;padding:10px 10px 12px}
+.plate b{font-family:var(--display);font-size:clamp(26px,3.4vw,44px);font-weight:700;line-height:1}
+.plate small{font-size:13px;color:#9EA5AA}
+.plate.free{border-color:var(--orange)}
+.plate.free b{color:var(--orange)}
+.plate.taken{background:#2A3035;border-color:#2A3035}
+.plate.taken b{color:#5D656B;text-decoration:line-through;text-decoration-thickness:3px}
+.after{margin-top:18px;font-size:16px;color:#9EA5AA}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:64px 0}
+.story h2,.spec h2,.terms h2,.book h2{font-family:var(--display);font-weight:600;font-size:clamp(32px,4vw,46px);line-height:1;margin:0 0 18px}
+.story p{margin:0 0 14px;max-width:34em}
+.story figure{margin:0}
+
+/* spec */
+.spec{padding:10px 0 60px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.spec dl{margin:0;display:grid;grid-template-columns:auto 1fr;border-top:2px solid var(--slate)}
+.spec dt,.spec dd{padding:12px 0;border-bottom:1px solid var(--line);margin:0}
+.spec dt{font-weight:600;padding-right:22px}
+.spec .note{font-size:15px;color:var(--mid);margin-top:14px}
+
+/* terms */
+.terms{background:var(--white);padding:60px 0}
+.terms-list{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px;margin:0;padding:0;list-style:none}
+.terms-list li h3{font-family:var(--display);font-size:24px;font-weight:600;margin:0 0 6px;border-top:3px solid var(--orange);padding-top:10px}
+.terms-list li p{margin:0;font-size:17px;color:#3A4045}
+details{margin-top:32px;border-top:1px solid var(--line);padding-top:16px}
+summary{cursor:pointer;font-weight:600}
+details .full{columns:2;column-gap:40px;font-size:16px;color:#3A4045;margin-top:14px}
+details .full p{break-inside:avoid;margin:0 0 12px}
+
+/* booking */
+.book{padding:64px 0 72px}
+.book-grid{display:grid;grid-template-columns:5fr 7fr;gap:48px}
+.book p{max-width:30em}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:16px}
+label.full{grid-column:1/-1}
+input,select,textarea{font:400 17px var(--text);padding:12px 13px;border:1.5px solid #B9BEC1;border-radius:6px;background:var(--white);color:var(--slate)}
+input:focus,select:focus,textarea:focus{border-color:var(--slate);outline:none;box-shadow:0 0 0 3px rgba(242,102,28,.35)}
+textarea{min-height:110px;resize:vertical}
+.form-foot{grid-column:1/-1;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.form-foot small{color:var(--mid);font-size:14px;max-width:32em}
+#form-msg{grid-column:1/-1;font-weight:600;color:var(--slate);margin:0}
+#form-msg:empty{display:none}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:15px;color:var(--mid)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  body{font-size:17px}
+  .hero,.story,.book-grid,.spec-grid{grid-template-columns:1fr}
+  .hero figure{order:-1}
+  .plates{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+  .plate{padding:8px 7px 9px}
+  .plate small{font-size:11px}
+  .terms-list{grid-template-columns:1fr}
+  details .full{columns:1}
+  .story{gap:28px;padding:48px 0}
+}
+@media (max-width:520px){
+  form{grid-template-columns:1fr}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#" aria-label="xthreem">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#C8141E" stroke-width="3.5"/><path d="M12 12 L28 28 M28 12 L12 28" stroke="#1F2428" stroke-width="4.5" stroke-linecap="round"/></svg>
+      xthreem
+    </a>
+    <nav class="langs" aria-label="Lingua / Sprache / Langue / Language">
+      <button data-lang="it" aria-pressed="true">IT</button>
+      <button data-lang="de" aria-pressed="false">DE</button>
+      <button data-lang="fr" aria-pressed="false">FR</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1 data-i18n="hero_title">La prima 24" xthreem.</h1>
+      <p class="lead" data-i18n="hero_lead">Mountain bike biammortizzata per ragazzi che vogliono fare sul serio sui sentieri. Ogni bici è montata, regolata e adattata a mano in Ticino.</p>
+      <div class="price"><strong data-price>CHF 1.700</strong><span data-i18n="price_note">edizione di lancio, primi 10 pezzi</span></div>
+      <a class="btn" href="#prenota" data-i18n="cta">Prenota la tua</a>
+    </div>
+    <figure>
+      <img src="https://res.cloudinary.com/mial2ln4/image/upload/f_auto,q_auto,w_1400/render_24_arancio_tre_quarti" alt="xthreem 24, mountain bike biammortizzata arancione, vista tre quarti" data-i18n-alt="img_alt" width="1400" height="1050">
+      <figcaption data-i18n="render_note">Anteprima grafica (render). Le foto della prima bici montata arrivano durante il montaggio.</figcaption>
+    </figure>
+  </section>
+</div>
+
+<section class="edition" aria-labelledby="ed-h">
+  <div class="wrap">
+    <div class="edition-head">
+      <h2 id="ed-h" data-i18n="ed_title">Edizione di lancio: 10 bici numerate</h2>
+      <p data-i18n="ed_text">Le prime dieci costano CHF 1.700. Ogni bici ha il suo numero, assegnato in ordine di pagamento.</p>
+    </div>
+    <div class="plates" id="plates" aria-live="polite"></div>
+    <p class="after" data-i18n="ed_after">Dall'undicesima il prezzo sarà CHF 1.990.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="story">
+    <div>
+      <h2 data-i18n="story_title">Dal telaio alla bici finita</h2>
+      <p data-i18n="story_p1">Produrre telai biammortizzati in Svizzera renderebbe una bici da ragazzi irraggiungibile per la maggior parte delle famiglie. Per questo abbiamo scelto un fornitore di telai che abbiamo già provato di persona.</p>
+      <p data-i18n="story_p2">Tutto quello che un ragazzo sente davvero succede qui in Ticino: ogni componente montato a mano, le sospensioni tarate sul suo peso, sella e leve regolate su di lui il giorno del ritiro.</p>
+      <p data-i18n="story_p3">Dietro c'è Davide, anni di officina e di negozio bici, che segue ogni bici dall'ordine alla consegna.</p>
+    </div>
+    <figure>
+      <img src="https://res.cloudinary.com/mial2ln4/image/upload/f_auto,q_auto,w_1100/render_24_arancio_laterale" alt="xthreem 24 arancione, vista laterale" data-i18n-alt="img2_alt" loading="lazy" width="1100" height="825">
+      <figcaption data-i18n="render_short">Anteprima grafica (render).</figcaption>
+    </figure>
+  </section>
+
+  <section class="spec" aria-labelledby="spec-h">
+    <h2 id="spec-h" data-i18n="spec_title">Come è fatta</h2>
+    <div class="spec-grid">
+      <dl>
+        <dt data-i18n="s_wheels">Ruote</dt><dd data-i18n="s_wheels_v">24", gomme tassellate da trail</dd>
+        <dt data-i18n="s_susp">Sospensioni</dt><dd data-i18n="s_susp_v">Biammortizzata: forcella ad aria e ammortizzatore posteriore</dd>
+        <dt data-i18n="s_drive">Trasmissione</dt><dd data-i18n="s_drive_v">1x, una sola corona: semplice da usare</dd>
+      </dl>
+      <dl>
+        <dt data-i18n="s_brakes">Freni</dt><dd data-i18n="s_brakes_v">A disco idraulici, anteriore e posteriore</dd>
+        <dt data-i18n="s_post">Reggisella</dt><dd data-i18n="s_post_v">Telescopico</dd>
+        <dt data-i18n="s_size">Per chi</dt><dd data-i18n="s_size_v">Ragazzi di circa 125–145 cm: la taglia si verifica sempre insieme</dd>
+      </dl>
+    </div>
+    <p class="note" data-i18n="spec_note">Forcella, ammortizzatore e trasmissione si possono migliorare su richiesta. Prima del pagamento ricevi la scheda tecnica completa con i modelli esatti dei componenti.</p>
+  </section>
+</div>
+
+<section class="terms" aria-labelledby="terms-h">
+  <div class="wrap">
+    <h2 id="terms-h" data-i18n="terms_title">Come funziona</h2>
+    <ul class="terms-list">
+      <li><h3 data-i18n="t1_h">Pagamento</h3><p data-i18n="t1_p">Completo all'ordine, con QR-fattura. Carta o TWINT su richiesta.</p></li>
+      <li><h3 data-i18n="t2_h">Pronta in 6–8 settimane</h3><p data-i18n="t2_p">Dalla data di pagamento. Ti aggiorniamo a ogni passaggio, con foto del montaggio.</p></li>
+      <li><h3 data-i18n="t3_h">Rimborso garantito</h3><p data-i18n="t3_p">Se la bici non è pronta entro 10 settimane, ti restituiamo tutto.</p></li>
+      <li><h3 data-i18n="t4_h">Ritiro in Ticino</h3><p data-i18n="t4_p">Compreso, con regolazione sul ragazzo. Spedizione in Svizzera possibile, a pagamento.</p></li>
+      <li><h3 data-i18n="t5_h">Garanzia 2 anni</h3><p data-i18n="t5_p">Su materiale e montaggio, più un controllo gratuito dopo circa 2 mesi di uso.</p></li>
+      <li><h3 data-i18n="t6_h">Ci parli direttamente</h3><p data-i18n="t6_p">Per qualsiasi dubbio scrivi a <a data-mail href="mailto:ordini@xthreem.ch">ordini@xthreem.ch</a>: rispondiamo entro 3 giorni lavorativi.</p></li>
+    </ul>
+    <details>
+      <summary data-i18n="full_terms">Condizioni di vendita complete</summary>
+      <div class="full">
+        <p data-i18n="ft1">Le immagini sono anteprime grafiche: la bici consegnata può differire in dettagli estetici, mai nella configurazione tecnica confermata.</p>
+        <p data-i18n="ft2">Il prezzo è finale e non cambia dopo il pagamento. Gli upgrade si concordano e si pagano prima dell'ordine.</p>
+        <p data-i18n="ft3">L'ordine è confermato quando il pagamento risulta accreditato; ricevi una conferma scritta con numero d'ordine.</p>
+        <p data-i18n="ft4">Puoi annullare senza costi entro 24 ore dal pagamento. Dopo vale la garanzia di rimborso a 10 settimane.</p>
+        <p data-i18n="ft5">La garanzia non copre l'usura normale (gomme, freni, catena), le cadute e le modifiche fatte da terzi.</p>
+        <p data-i18n="ft6">La bici si usa sempre con il casco. I genitori decidono dove e come il ragazzo la usa.</p>
+        <p data-i18n="ft7">I tuoi dati servono solo per l'ordine, la consegna e la garanzia. Si applica il diritto svizzero.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="book" id="prenota" aria-labelledby="book-h">
+    <div class="book-grid">
+      <div>
+        <h2 id="book-h" data-i18n="book_title">Prenota la tua 24"</h2>
+        <p data-i18n="book_p1">Mandaci due righe: ti rispondiamo entro 24 ore con la scheda tecnica completa e, se la taglia è giusta, con la QR-fattura.</p>
+        <p data-i18n="book_p2">Nessun pagamento con questo modulo: è solo una richiesta.</p>
+      </div>
+      <form id="book-form" novalidate>
+        <label><span data-i18n="f_name">Nome e cognome</span><input name="name" autocomplete="name" required></label>
+        <label><span data-i18n="f_email">E-mail</span><input name="email" type="email" autocomplete="email" required></label>
+        <label><span data-i18n="f_phone">Telefono (facoltativo)</span><input name="phone" type="tel" autocomplete="tel"></label>
+        <label><span data-i18n="f_height">Altezza del ragazzo (cm)</span><input name="height" type="number" min="100" max="190" inputmode="numeric" required></label>
+        <label class="full"><span data-i18n="f_msg">Domande o richieste (upgrade, colore, ritiro)</span><textarea name="msg"></textarea></label>
+        <p id="form-msg" role="status"></p>
+        <div class="form-foot">
+          <button class="btn" type="submit" data-i18n="f_send">Invia la richiesta</button>
+          <small data-i18n="f_note">Si apre il tuo programma di posta con il messaggio già scritto: premi Invia.</small>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>xthreem · [Nome Cognome] · [Indirizzo, CAP Località] · <a data-mail href="mailto:ordini@xthreem.ch">ordini@xthreem.ch</a></div>
+    <div data-i18n="foot_r">Montata a mano in Ticino</div>
+  </div>
+</footer>
+
+<script>
+/* ---------- CONFIG: l'agente aggiorna solo questo blocco ---------- */
+const SITE_CONFIG = {
+  email: "ordini@xthreem.ch",
+  launchTotal: 10,
+  sold: 0,               // numero di bici dell'edizione di lancio gia pagate
+  launchPrice: "CHF 1.700",
+  regularPrice: "CHF 1.990"
+};
+/* ------------------------------------------------------------------ */
+
+const T = {
+ it:{hero_title:'La prima 24" xthreem.',hero_lead:"Mountain bike biammortizzata per ragazzi che vogliono fare sul serio sui sentieri. Ogni bici è montata, regolata e adattata a mano in Ticino.",price_note:"edizione di lancio, primi 10 pezzi",price_note_regular:"prezzo di listino",cta:"Prenota la tua",img_alt:"xthreem 24, mountain bike biammortizzata arancione, vista tre quarti",render_note:"Anteprima grafica (render). Le foto della prima bici montata arrivano durante il montaggio.",ed_title:"Edizione di lancio: 10 bici numerate",ed_text:"Le prime dieci costano CHF 1.700. Ogni bici ha il suo numero, assegnato in ordine di pagamento.",ed_after:"Dall'undicesima il prezzo sarà CHF 1.990.",free:"disponibile",taken:"prenotata",story_title:"Dal telaio alla bici finita",story_p1:"Produrre telai biammortizzati in Svizzera renderebbe una bici da ragazzi irraggiungibile per la maggior parte delle famiglie. Per questo abbiamo scelto un fornitore di telai che abbiamo già provato di persona.",story_p2:"Tutto quello che un ragazzo sente davvero succede qui in Ticino: ogni componente montato a mano, le sospensioni tarate sul suo peso, sella e leve regolate su di lui il giorno del ritiro.",story_p3:"Dietro c'è Davide, anni di officina e di negozio bici, che segue ogni bici dall'ordine alla consegna.",img2_alt:"xthreem 24 arancione, vista laterale",render_short:"Anteprima grafica (render).",spec_title:"Come è fatta",s_wheels:"Ruote",s_wheels_v:'24", gomme tassellate da trail',s_susp:"Sospensioni",s_susp_v:"Biammortizzata: forcella ad aria e ammortizzatore posteriore",s_drive:"Trasmissione",s_drive_v:"1x, una sola corona: semplice da usare",s_brakes:"Freni",s_brakes_v:"A disco idraulici, anteriore e posteriore",s_post:"Reggisella",s_post_v:"Telescopico",s_size:"Per chi",s_size_v:"Ragazzi di circa 125–145 cm: la taglia si verifica sempre insieme",spec_note:"Forcella, ammortizzatore e trasmissione si possono migliorare su richiesta. Prima del pagamento ricevi la scheda tecnica completa con i modelli esatti dei componenti.",terms_title:"Come funziona",t1_h:"Pagamento",t1_p:"Completo all'ordine, con QR-fattura. Carta o TWINT su richiesta.",t2_h:"Pronta in 6–8 settimane",t2_p:"Dalla data di pagamento. Ti aggiorniamo a ogni passaggio, con foto del montaggio.",t3_h:"Rimborso garantito",t3_p:"Se la bici non è pronta entro 10 settimane, ti restituiamo tutto.",t4_h:"Ritiro in Ticino",t4_p:"Compreso, con regolazione sul ragazzo. Spedizione in Svizzera possibile, a pagamento.",t5_h:"Garanzia 2 anni",t5_p:"Su materiale e montaggio, più un controllo gratuito dopo circa 2 mesi di uso.",t6_h:"Ci parli direttamente",t6_p:"Per qualsiasi dubbio scrivi a {mail}: rispondiamo entro 3 giorni lavorativi.",full_terms:"Condizioni di vendita complete",ft1:"Le immagini sono anteprime grafiche: la bici consegnata può differire in dettagli estetici, mai nella configurazione tecnica confermata.",ft2:"Il prezzo è finale e non cambia dopo il pagamento. Gli upgrade si concordano e si pagano prima dell'ordine.",ft3:"L'ordine è confermato quando il pagamento risulta accreditato; ricevi una conferma scritta con numero d'ordine.",ft4:"Puoi annullare senza costi entro 24 ore dal pagamento. Dopo vale la garanzia di rimborso a 10 settimane.",ft5:"La garanzia non copre l'usura normale (gomme, freni, catena), le cadute e le modifiche fatte da terzi.",ft6:"La bici si usa sempre con il casco. I genitori decidono dove e come il ragazzo la usa.",ft7:"I tuoi dati servono solo per l'ordine, la consegna e la garanzia. Si applica il diritto svizzero.",book_title:'Prenota la tua 24"',book_p1:"Mandaci due righe: ti rispondiamo entro 24 ore con la scheda tecnica completa e, se la taglia è giusta, con la QR-fattura.",book_p2:"Nessun pagamento con questo modulo: è solo una richiesta.",f_name:"Nome e cognome",f_email:"E-mail",f_phone:"Telefono (facoltativo)",f_height:"Altezza del ragazzo (cm)",f_msg:"Domande o richieste (upgrade, colore, ritiro)",f_send:"Invia la richiesta",f_note:"Si apre il tuo programma di posta con il messaggio già scritto: premi Invia.",f_err:"Compila nome, e-mail e altezza del ragazzo.",f_ok:"Fatto: nel tuo programma di posta trovi il messaggio pronto. Se non si è aperto, scrivi a {mail}.",subj:"Prenotazione xthreem 24",b_name:"Nome",b_phone:"Telefono",b_height:"Altezza del ragazzo",b_msg:"Messaggio",foot_r:"Montata a mano in Ticino"},
+ de:{hero_title:'Das erste xthreem 24".',hero_lead:"Vollgefedertes Mountainbike für Kinder und Jugendliche, die auf dem Trail Ernst machen. Jedes Bike wird im Tessin von Hand montiert, eingestellt und angepasst.",price_note:"Launch-Edition, die ersten 10 Stück",price_note_regular:"regulärer Preis",cta:"Jetzt reservieren",img_alt:"xthreem 24, vollgefedertes orange Mountainbike, Dreiviertelansicht",render_note:"Grafische Vorschau (Rendering). Fotos vom ersten montierten Bike folgen während der Montage.",ed_title:"Launch-Edition: 10 nummerierte Bikes",ed_text:"Die ersten zehn kosten CHF 1.700. Jedes Bike bekommt seine Nummer, in der Reihenfolge der Zahlung.",ed_after:"Ab dem elften Bike kostet es CHF 1.990.",free:"verfügbar",taken:"reserviert",story_title:"Vom Rahmen zum fertigen Bike",story_p1:"Vollgefederte Rahmen in der Schweiz herzustellen, würde ein Kinderbike für die meisten Familien unbezahlbar machen. Deshalb haben wir einen Rahmenlieferanten gewählt, den wir selbst getestet haben.",story_p2:"Alles, was junge Fahrer wirklich spüren, passiert hier im Tessin: jedes Teil von Hand montiert, die Federung auf ihr Gewicht abgestimmt, Sattel und Hebel am Tag der Abholung eingestellt.",story_p3:"Dahinter steht Davide, mit Jahren Erfahrung in Werkstatt und Velogeschäft, der jedes Bike von der Bestellung bis zur Übergabe begleitet.",img2_alt:"xthreem 24 in Orange, Seitenansicht",render_short:"Grafische Vorschau (Rendering).",spec_title:"So ist es gebaut",s_wheels:"Laufräder",s_wheels_v:'24", grobstollige Trail-Reifen',s_susp:"Federung",s_susp_v:"Vollgefedert: Luftfedergabel und Hinterbaudämpfer",s_drive:"Antrieb",s_drive_v:"1-fach, ein Kettenblatt: einfach zu bedienen",s_brakes:"Bremsen",s_brakes_v:"Hydraulische Scheibenbremsen vorne und hinten",s_post:"Sattelstütze",s_post_v:"Absenkbar (Dropper)",s_size:"Für wen",s_size_v:"Kinder von etwa 125–145 cm: Die Grösse prüfen wir immer gemeinsam",spec_note:"Gabel, Dämpfer und Antrieb lassen sich auf Wunsch aufwerten. Vor der Zahlung erhältst du das vollständige Datenblatt mit den genauen Komponenten.",terms_title:"So funktioniert's",t1_h:"Zahlung",t1_p:"Vollständig bei der Bestellung, per QR-Rechnung. Karte oder TWINT auf Anfrage.",t2_h:"Fertig in 6–8 Wochen",t2_p:"Ab Zahlungsdatum. Wir informieren dich bei jedem Schritt, mit Fotos der Montage.",t3_h:"Geld-zurück-Garantie",t3_p:"Ist das Bike nach 10 Wochen nicht fertig, erstatten wir alles zurück.",t4_h:"Abholung im Tessin",t4_p:"Inklusive Einstellung auf dein Kind. Versand in der Schweiz möglich, kostenpflichtig.",t5_h:"2 Jahre Garantie",t5_p:"Auf Material und Montage, dazu ein Gratis-Check nach etwa 2 Monaten.",t6_h:"Direkter Kontakt",t6_p:"Bei Fragen schreib an {mail}: Wir antworten innert 3 Arbeitstagen.",full_terms:"Vollständige Verkaufsbedingungen",ft1:"Die Bilder sind grafische Vorschauen: Das gelieferte Bike kann in optischen Details abweichen, nie in der bestätigten technischen Ausstattung.",ft2:"Der Preis ist fix und ändert sich nach der Zahlung nicht. Upgrades werden vor der Bestellung vereinbart und bezahlt.",ft3:"Die Bestellung ist bestätigt, sobald die Zahlung eingegangen ist; du erhältst eine schriftliche Bestätigung mit Bestellnummer.",ft4:"Du kannst innert 24 Stunden nach der Zahlung kostenlos stornieren. Danach gilt die Geld-zurück-Garantie nach 10 Wochen.",ft5:"Die Garantie deckt keinen normalen Verschleiss (Reifen, Bremsen, Kette), keine Stürze und keine Änderungen durch Dritte.",ft6:"Das Bike wird immer mit Helm gefahren. Die Eltern entscheiden, wo und wie ihr Kind fährt.",ft7:"Deine Daten dienen nur Bestellung, Übergabe und Garantie. Es gilt Schweizer Recht.",book_title:'Reserviere dein 24"',book_p1:"Schreib uns kurz: Wir antworten innert 24 Stunden mit dem vollständigen Datenblatt und, wenn die Grösse passt, mit der QR-Rechnung.",book_p2:"Mit diesem Formular zahlst du nichts: Es ist nur eine Anfrage.",f_name:"Vor- und Nachname",f_email:"E-Mail",f_phone:"Telefon (freiwillig)",f_height:"Grösse des Kindes (cm)",f_msg:"Fragen oder Wünsche (Upgrades, Farbe, Abholung)",f_send:"Anfrage senden",f_note:"Dein E-Mail-Programm öffnet sich mit der fertigen Nachricht: einfach auf Senden tippen.",f_err:"Bitte Name, E-Mail und Grösse des Kindes ausfüllen.",f_ok:"Erledigt: Die Nachricht ist in deinem E-Mail-Programm bereit. Falls es sich nicht geöffnet hat, schreib an {mail}.",subj:"Reservierung xthreem 24",b_name:"Name",b_phone:"Telefon",b_height:"Grösse des Kindes",b_msg:"Nachricht",foot_r:"Von Hand montiert im Tessin"},
+ fr:{hero_title:'Le premier xthreem 24".',hero_lead:"VTT tout-suspendu pour les jeunes qui veulent rouler sérieusement sur les sentiers. Chaque vélo est monté, réglé et ajusté à la main au Tessin.",price_note:"édition de lancement, 10 premiers vélos",price_note_regular:"prix courant",cta:"Réserver le vôtre",img_alt:"xthreem 24, VTT tout-suspendu orange, vue trois-quarts",render_note:"Aperçu graphique (rendu). Les photos du premier vélo monté arrivent pendant le montage.",ed_title:"Édition de lancement : 10 vélos numérotés",ed_text:"Les dix premiers coûtent CHF 1.700. Chaque vélo reçoit son numéro, dans l'ordre des paiements.",ed_after:"À partir du onzième, le prix sera de CHF 1.990.",free:"disponible",taken:"réservé",story_title:"Du cadre au vélo fini",story_p1:"Fabriquer des cadres tout-suspendus en Suisse rendrait un vélo pour enfant inabordable pour la plupart des familles. Nous avons donc choisi un fournisseur de cadres que nous avons testé nous-mêmes.",story_p2:"Tout ce que le jeune ressent vraiment se passe ici, au Tessin : chaque composant monté à la main, les suspensions réglées sur son poids, selle et leviers ajustés le jour du retrait.",story_p3:"Derrière, il y a Davide, des années d'atelier et de magasin de vélos, qui suit chaque vélo de la commande à la remise.",img2_alt:"xthreem 24 orange, vue de profil",render_short:"Aperçu graphique (rendu).",spec_title:"Ce qu'il y a dedans",s_wheels:"Roues",s_wheels_v:'24", pneus à crampons pour le trail',s_susp:"Suspensions",s_susp_v:"Tout-suspendu : fourche à air et amortisseur arrière",s_drive:"Transmission",s_drive_v:"Mono-plateau 1x : simple à utiliser",s_brakes:"Freins",s_brakes_v:"Disques hydrauliques avant et arrière",s_post:"Tige de selle",s_post_v:"Télescopique",s_size:"Pour qui",s_size_v:"Jeunes d'environ 125–145 cm : la taille se vérifie toujours ensemble",spec_note:"Fourche, amortisseur et transmission peuvent être améliorés sur demande. Avant le paiement, vous recevez la fiche technique complète avec les composants exacts.",terms_title:"Comment ça marche",t1_h:"Paiement",t1_p:"Complet à la commande, par QR-facture. Carte ou TWINT sur demande.",t2_h:"Prêt en 6–8 semaines",t2_p:"À partir de la date de paiement. Nous vous tenons informés à chaque étape, photos du montage à l'appui.",t3_h:"Remboursement garanti",t3_p:"Si le vélo n'est pas prêt dans les 10 semaines, nous vous remboursons tout.",t4_h:"Retrait au Tessin",t4_p:"Compris, avec réglage sur l'enfant. Envoi en Suisse possible, payant.",t5_h:"Garantie 2 ans",t5_p:"Sur le matériel et le montage, plus un contrôle gratuit après environ 2 mois.",t6_h:"Un contact direct",t6_p:"Pour toute question, écrivez à {mail} : réponse sous 3 jours ouvrables.",full_terms:"Conditions de vente complètes",ft1:"Les images sont des aperçus graphiques : le vélo livré peut différer dans les détails esthétiques, jamais dans la configuration technique confirmée.",ft2:"Le prix est ferme et ne change pas après le paiement. Les améliorations se conviennent et se paient avant la commande.",ft3:"La commande est confirmée dès réception du paiement ; vous recevez une confirmation écrite avec numéro de commande.",ft4:"Vous pouvez annuler sans frais dans les 24 heures suivant le paiement. Ensuite s'applique la garantie de remboursement à 10 semaines.",ft5:"La garantie ne couvre pas l'usure normale (pneus, freins, chaîne), les chutes ni les modifications faites par des tiers.",ft6:"Le vélo s'utilise toujours avec un casque. Les parents décident où et comment l'enfant roule.",ft7:"Vos données servent uniquement à la commande, à la remise et à la garantie. Le droit suisse s'applique.",book_title:'Réservez votre 24"',book_p1:"Écrivez-nous en deux lignes : nous répondons sous 24 heures avec la fiche technique complète et, si la taille convient, avec la QR-facture.",book_p2:"Ce formulaire n'engage aucun paiement : c'est une simple demande.",f_name:"Prénom et nom",f_email:"E-mail",f_phone:"Téléphone (facultatif)",f_height:"Taille de l'enfant (cm)",f_msg:"Questions ou demandes (améliorations, couleur, retrait)",f_send:"Envoyer la demande",f_note:"Votre messagerie s'ouvre avec le message déjà rédigé : appuyez sur Envoyer.",f_err:"Veuillez indiquer nom, e-mail et taille de l'enfant.",f_ok:"C'est fait : le message est prêt dans votre messagerie. Si elle ne s'est pas ouverte, écrivez à {mail}.",subj:"Réservation xthreem 24",b_name:"Nom",b_phone:"Téléphone",b_height:"Taille de l'enfant",b_msg:"Message",foot_r:"Monté à la main au Tessin"},
+ en:{hero_title:'The first xthreem 24".',hero_lead:"A full-suspension mountain bike for young riders who take the trail seriously. Every bike is assembled, tuned and fitted by hand in Ticino.",price_note:"launch edition, first 10 bikes",price_note_regular:"regular price",cta:"Book yours",img_alt:"xthreem 24, orange full-suspension mountain bike, three-quarter view",render_note:"Graphic preview (render). Photos of the first built bike will follow during assembly.",ed_title:"Launch edition: 10 numbered bikes",ed_text:"The first ten cost CHF 1,700. Each bike gets its own number, in order of payment.",ed_after:"From the eleventh bike the price will be CHF 1,990.",free:"available",taken:"booked",story_title:"From frame to finished bike",story_p1:"Making full-suspension frames in Switzerland would put a kids' bike out of reach for most families. So we chose a frame supplier we have tested ourselves.",story_p2:"Everything a young rider actually feels happens here in Ticino: every part assembled by hand, suspension set for their weight, saddle and levers fitted to them on pick-up day.",story_p3:"Behind it is Davide, with years of workshop and bike-shop experience, who follows every bike from order to hand-over.",img2_alt:"Orange xthreem 24, side view",render_short:"Graphic preview (render).",spec_title:"What's on it",s_wheels:"Wheels",s_wheels_v:'24", knobby trail tyres',s_susp:"Suspension",s_susp_v:"Full suspension: air fork and rear shock",s_drive:"Drivetrain",s_drive_v:"1x, single chainring: easy to use",s_brakes:"Brakes",s_brakes_v:"Hydraulic discs, front and rear",s_post:"Seatpost",s_post_v:"Dropper",s_size:"Who it fits",s_size_v:"Riders of about 125–145 cm: we always check the size together",spec_note:"Fork, shock and drivetrain can be upgraded on request. Before you pay, you get the full spec sheet with the exact components.",terms_title:"How it works",t1_h:"Payment",t1_p:"In full when you order, by QR-bill. Card or TWINT on request.",t2_h:"Ready in 6–8 weeks",t2_p:"From the payment date. We update you at every step, with photos of the build.",t3_h:"Money-back guarantee",t3_p:"If the bike isn't ready within 10 weeks, you get everything back.",t4_h:"Pick-up in Ticino",t4_p:"Included, with fitting to your kid. Shipping within Switzerland available at extra cost.",t5_h:"2-year warranty",t5_p:"On parts and assembly, plus a free check after about 2 months of riding.",t6_h:"Talk to us directly",t6_p:"Any question, email {mail}: we reply within 3 working days.",full_terms:"Full terms of sale",ft1:"Images are graphic previews: the delivered bike may differ in cosmetic details, never in the confirmed technical spec.",ft2:"The price is fixed and won't change after payment. Upgrades are agreed and paid before ordering.",ft3:"Your order is confirmed once payment is received; you get a written confirmation with an order number.",ft4:"You can cancel free of charge within 24 hours of payment. After that, the 10-week money-back guarantee applies.",ft5:"The warranty doesn't cover normal wear (tyres, brakes, chain), crashes or changes made by third parties.",ft6:"Always ride with a helmet. Parents decide where and how their kid rides.",ft7:"Your data is used only for the order, hand-over and warranty. Swiss law applies.",book_title:'Book your 24"',book_p1:"Drop us a line: we reply within 24 hours with the full spec sheet and, if the size is right, the QR-bill.",book_p2:"This form takes no payment: it's just a request.",f_name:"Full name",f_email:"Email",f_phone:"Phone (optional)",f_height:"Rider's height (cm)",f_msg:"Questions or requests (upgrades, colour, pick-up)",f_send:"Send request",f_note:"Your email app opens with the message ready: just tap Send.",f_err:"Please fill in name, email and rider's height.",f_ok:"Done: the message is ready in your email app. If it didn't open, email {mail}.",subj:"Booking xthreem 24",b_name:"Name",b_phone:"Phone",b_height:"Rider's height",b_msg:"Message",foot_r:"Built by hand in Ticino"}
+};
+
+let lang = "it";
+const mailLink = () => `<a href="mailto:${SITE_CONFIG.email}">${SITE_CONFIG.email}</a>`;
+const soldOut = () => SITE_CONFIG.sold >= SITE_CONFIG.launchTotal;
+
+function fmtPrice(p){ return lang==="en" ? p.replace(".", ",") : p; }
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k = el.dataset.i18n; if(!(k in t)) return;
+    if(t[k].includes("{mail}")) el.innerHTML = t[k].replace("{mail}", mailLink());
+    else el.textContent = t[k];
+  });
+  document.querySelectorAll("[data-i18n-alt]").forEach(el=>{ el.alt = t[el.dataset.i18nAlt]; });
+  document.querySelectorAll("[data-mail]").forEach(a=>{ a.href="mailto:"+SITE_CONFIG.email; a.textContent=SITE_CONFIG.email; });
+  document.querySelectorAll("[data-lang]").forEach(b=> b.setAttribute("aria-pressed", b.dataset.lang===lang));
+  const price = document.querySelector("[data-price]");
+  price.textContent = fmtPrice(soldOut() ? SITE_CONFIG.regularPrice : SITE_CONFIG.launchPrice);
+  document.querySelector('[data-i18n="price_note"]').textContent = soldOut() ? t.price_note_regular : t.price_note;
+  const plates = document.getElementById("plates"); plates.innerHTML = "";
+  for(let i=1;i<=SITE_CONFIG.launchTotal;i++){
+    const taken = i <= SITE_CONFIG.sold;
+    const d = document.createElement("div");
+    d.className = "plate " + (taken ? "taken" : "free");
+    d.innerHTML = `<b>${String(i).padStart(2,"0")}</b><small>${taken ? t.taken : t.free}</small>`;
+    plates.appendChild(d);
+  }
+}
+
+document.querySelectorAll("[data-lang]").forEach(b=> b.addEventListener("click", ()=>{
+  lang = b.dataset.lang; try{ localStorage.setItem("xthreem-lang", lang); }catch(e){}
+  render();
+}));
+
+(function initLang(){
+  const q = new URLSearchParams(location.search).get("lang");
+  let saved = null; try{ saved = localStorage.getItem("xthreem-lang"); }catch(e){}
+  const nav = (navigator.language||"it").slice(0,2);
+  lang = [q, saved, nav].find(l => l && T[l]) || "it";
+  render();
+})();
+
+document.getElementById("book-form").addEventListener("submit", e=>{
+  e.preventDefault();
+  const t = T[lang], f = e.target, msg = document.getElementById("form-msg");
+  const name=f.name.value.trim(), email=f.email.value.trim(), height=f.height.value.trim();
+  if(!name || !email.includes("@") || !height){ msg.textContent = t.f_err; return; }
+  const body = [
+    `${t.b_name}: ${name}`, `E-mail: ${email}`,
+    f.phone.value.trim() ? `${t.b_phone}: ${f.phone.value.trim()}` : null,
+    `${t.b_height}: ${height} cm`, `Lingua/Sprache/Langue: ${lang.toUpperCase()}`,
+    f.msg.value.trim() ? `\n${t.b_msg}:\n${f.msg.value.trim()}` : null
+  ].filter(Boolean).join("\n");
+  location.href = `mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent(t.subj+" – "+name)}&body=${encodeURIComponent(body)}`;
+  msg.innerHTML = t.f_ok.replace("{mail}", mailLink());
+});
+</script>
+</body>
+</html>
