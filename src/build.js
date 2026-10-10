@@ -24,7 +24,16 @@ function head(l){
       {"@type":"Product","@id":url+"#product","name":L.name,"brand":{"@type":"Brand","name":"xthreem"},
        "image":[IMG],"description":L.desc,"category":"Kids mountain bike",
        "offers":{"@type":"Offer","url":url,"price":"1700.00","priceCurrency":"CHF",
-         "availability":"https://schema.org/PreOrder","seller":{"@id":SITE+"/#org"}}}
+         "availability":"https://schema.org/PreOrder","seller":{"@id":SITE+"/#org"},
+         "shippingDetails":{"@type":"OfferShippingDetails",
+           "shippingRate":{"@type":"MonetaryAmount","value":"99.00","currency":"CHF"},
+           "shippingDestination":{"@type":"DefinedRegion","addressCountry":"CH"},
+           "deliveryTime":{"@type":"ShippingDeliveryTime",
+             "handlingTime":{"@type":"QuantitativeValue","minValue":42,"maxValue":56,"unitCode":"DAY"},
+             "transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},
+         "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"CH",
+           "returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":14,
+           "itemCondition":"https://schema.org/NewCondition","refundType":"https://schema.org/FullRefund"}}}
     ]};
   return `<title>${esc(L.title)}</title>
 <meta name="description" content="${esc(L.desc)}">
