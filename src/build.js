@@ -33,7 +33,7 @@ function head(l){
              "transitTime":{"@type":"QuantitativeValue","minValue":1,"maxValue":3,"unitCode":"DAY"}}},
          "hasMerchantReturnPolicy":{"@type":"MerchantReturnPolicy","applicableCountry":"CH",
            "returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":14,
-           "itemCondition":"https://schema.org/NewCondition","refundType":"https://schema.org/FullRefund","returnFees":"https://schema.org/ReturnShippingFees"}}}
+           "itemCondition":"https://schema.org/NewCondition","refundType":"https://schema.org/FullRefund","returnFees":"https://schema.org/ReturnFeesCustomerResponsibility","returnMethod":"https://schema.org/ReturnByMail"}}}
     ]};
   return `<title>${esc(L.title)}</title>
 <meta name="description" content="${esc(L.desc)}">
