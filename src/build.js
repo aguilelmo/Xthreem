@@ -24,6 +24,7 @@ function head(l){
       {"@type":"Product","@id":url+"#product","name":L.name,"brand":{"@type":"Brand","name":"xthreem"},
        "image":[IMG],"description":L.desc,"category":"Kids mountain bike",
        "offers":{"@type":"Offer","url":url,"price":"1700.00","priceCurrency":"CHF",
+         "priceSpecification":[{"@type":"UnitPriceSpecification","price":"1700.00","priceCurrency":"CHF"},{"@type":"UnitPriceSpecification","priceType":"https://schema.org/StrikethroughPrice","price":"1990.00","priceCurrency":"CHF"}],
          "availability":"https://schema.org/PreOrder","seller":{"@id":SITE+"/#org"},
          "shippingDetails":{"@type":"OfferShippingDetails",
            "shippingRate":{"@type":"MonetaryAmount","value":"99.00","currency":"CHF"},
